@@ -3,7 +3,10 @@
 using namespace std;
 
 int main(){
-	char arreglo[]="Este es la resolucion del ejercicio dos";
+	char arreglo[100];
+	cout<<"Introduzca su texto:"<<endl<<endl;
+	gets(arreglo);
+	cout<<endl<<"Su texto separado es:"<<endl<<endl;
 	int n = strlen(arreglo);
 	for(int i=0; i<n; i++){
 		if (arreglo[i]==' '){
