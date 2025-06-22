@@ -3,27 +3,19 @@
 using namespace std;
 
 int main(){
-	char arreglo[]="Este es la resolucion del ejercicio tres y se va a contar cuantas vocales hay";
+	char arreglo[100];
+	cout<<"Introduzca un texto:"<<endl<<endl;
+	gets(arreglo);
 	int n = strlen(arreglo);
-	int as, es, is, os, us;
-	cout<<arreglo<<endl;
+	int s=0;
+	char letra;
+	cout<<endl<<"Que letra de su texto desea contar?"<<endl;
+	cin>>letra;
 	for(int i=0; i<n; i++){
-		if(arreglo[i]=='a'){
-			as++;
-		} else if(arreglo[i]=='e'){
-			es++;
-		} else if(arreglo[i]=='i'){
-			is++;
-		} else if(arreglo[i]=='o'){
-			os++;
-		} else if(arreglo[i]=='u'){
-			us++;
+		if(arreglo[i]==letra){
+			s=s+1;
 		}
 	}
-	cout<<"En su oracion hay: "<<as<<" letras (a)"<<endl;
-	cout<<"En su oracion hay: "<<es<<" letras (e)"<<endl;
-	cout<<"En su oracion hay: "<<is<<" letras (i)"<<endl;
-	cout<<"En su oracion hay: "<<os<<" letras (o)"<<endl;
-	cout<<"En su oracion hay: "<<us<<" letras (u)"<<endl;
+	cout<<"En su oracion hay: "<<s<<" letras '"<<letra<<"'"<<endl;
 	return 0;
 }
